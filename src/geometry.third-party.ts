@@ -7,7 +7,7 @@ export class Rectangle implements Rectangular {
   constructor(
     private width: number,
     private height: number,
-  ) {}
+  ) { }
 
   public getWidth(): number {
     return this.width;
@@ -35,5 +35,9 @@ export class Calculator {
     return Math.sqrt(
       Math.pow(rectangle.getHeight(), 2) + Math.pow(rectangle.getWidth(), 2),
     );
+  }
+
+  public static getWidthHeightRatio(Rectangular): number {
+    return Rectangular.getWidth() / Rectangular.getHeight()
   }
 }
